@@ -44,6 +44,7 @@ const setUpInProcNode = (addrs, hop, callback) => {
   }
 
   procDf.spawn({
+    initOptions: { bits: 512 },
     config: Object.assign({}, baseConf, {
       Addresses: {
         Swarm: addrs
@@ -72,6 +73,7 @@ const setUpJsNode = (addrs, hop, callback) => {
   }
 
   jsDf.spawn({
+    initOptions: { bits: 512 },
     config: Object.assign({}, baseConf, {
       Addresses: {
         Swarm: addrs
@@ -100,6 +102,7 @@ const setUpGoNode = (addrs, hop, callback) => {
   }
 
   goDf.spawn({
+    initOptions: { bits: 1024 },
     config: Object.assign({}, baseConf, {
       Addresses: {
         Swarm: addrs
